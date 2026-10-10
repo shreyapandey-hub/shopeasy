@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopEasy - Discover amazing products at great prices.">
+    <title>ShopEasy | Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="#" class="logo">ShopEasy<span>.</span></a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#featured">Featured</a>
+            <a href="#footer">Contact</a>
+        </nav>
+
+        <form class="search-box" id="searchForm">
+            <input type="search" id="searchInput"
+                   placeholder="Search products..." aria-label="Search products">
+            <button type="submit" aria-label="Search">⌕</button>
+        </form>
+
+        <a href="#featured" class="cart-link">
+            🛒 <span>Shop</span>
+        </a>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="tagline">YOUR EVERYDAY SHOPPING PARTNER</p>
+
+                <h1>Find What You <span>Love.</span></h1>
+
+                <p class="hero-description">
+                    Discover amazing products, explore new styles,
+                    and find great deals for your everyday needs.
+                </p>
+
+                <a href="#featured" class="primary-btn">Shop Now →</a>
+                <p class="hero-note">Great finds. Great prices. Happy shopping.</p>
+            </div>
+
+            <div class="hero-visual">
+                <img
+                    src="https://placehold.co/600x420/e4ebff/1746a2?text=ShopEasy+Collection"
+                    alt="ShopEasy featured shopping collection">
+                <div class="offer-badge">Discover<br>Something New!</div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section categories-section" id="categories">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">EXPLORE OUR STORE</p>
+                    <h2>Shop by Category</h2>
+                </div>
+                <p>Find something made for you.</p>
+            </div>
+
+            <div class="category-grid">
+                <a href="#featured" class="category-card"
+                   data-category="Electronics">
+                    <div class="category-icon">🎧</div>
+                    <h3>Electronics</h3>
+                    <p>Gadgets for everyday life</p>
+                    <span>Explore →</span>
+                </a>
+
+                <a href="#featured" class="category-card"
+                   data-category="Fashion">
+                    <div class="category-icon">👟</div>
+                    <h3>Fashion</h3>
+                    <p>Style it your way</p>
+                    <span>Explore →</span>
+                </a>
+
+                <a href="#featured" class="category-card"
+                   data-category="Accessories">
+                    <div class="category-icon">🎒</div>
+                    <h3>Accessories</h3>
+                    <p>Little things, big impact</p>
+                    <span>Explore →</span>
+                </a>
+
+                <a href="#featured" class="category-card"
+                   data-category="Home">
+                    <div class="category-icon">🏠</div>
+                    <h3>Home & Living</h3>
+                    <p>Make your space special</p>
+                    <span>Explore →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="section featured-section" id="featured">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">HANDPICKED FOR YOU</p>
+                    <h2>Featured Products</h2>
+                </div>
+                <span class="product-count" id="productCount"></span>
+            </div>
+
+            <div class="product-toolbar">
+                <div class="category-filters" id="categoryFilters">
+                    <button class="filter-btn active" data-filter="All">All</button>
+                    <button class="filter-btn" data-filter="Electronics">Electronics</button>
+                    <button class="filter-btn" data-filter="Fashion">Fashion</button>
+                    <button class="filter-btn" data-filter="Accessories">Accessories</button>
+                    <button class="filter-btn" data-filter="Home">Home</button>
+                </div>
+
+                <select id="sortFilter" aria-label="Sort products">
+                    <option value="default">Featured</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                </select>
+            </div>
+
+            <div class="product-grid" id="productList"></div>
+
+            <p class="empty-message" id="emptyMessage" hidden>
+                No products found. Try another search!
+            </p>
+        </section>
+
+        <!-- Promotional Banner -->
+        <section class="promo-banner">
+            <div>
+                <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+                <h2>Good Finds. Better Prices.</h2>
+                <p>Explore our collection and discover your next favourite.</p>
+            </div>
+            <a href="#featured" class="light-btn">Explore Products →</a>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div>
+                <p class="eyebrow">STAY IN THE LOOP</p>
+                <h2>Get updates from ShopEasy</h2>
+                <p>Enter your email to try our newsletter demo.</p>
+            </div>
+
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" id="emailInput"
+                       placeholder="Enter your email" required>
+                <button type="submit" class="primary-btn">Subscribe</button>
+            </form>
+            <p id="newsletterMessage" class="newsletter-message"
+               role="status"></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <a href="#home" class="logo footer-logo">ShopEasy<span>.</span></a>
+        <p>Your everyday shopping partner.</p>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#featured">Products</a>
+        </div>
+
+        <p class="copyright">
+            © <span id="year"></span> ShopEasy. Made for learning.
+        </p>
+    </footer>
+
+</body>
+</html>s
